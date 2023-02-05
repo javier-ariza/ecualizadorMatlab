@@ -1,14 +1,9 @@
 % TDS�-G33
 % Laboratorio: Trabajo final
-%
-% alumno1: carlos.chinchilla.fiter@alumnos.upm.es     
-% alumno2: javier.ariza.rosado@alumnos.upm.es    
-% alumno3: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-%
 %% Un poco de limpieza
 clear; clc; close all;
 %% Sistema a ecualizar
-[Z, P, K] = room('carlos.chinchilla.fiter@alumnos.upm.es','javier.ariza.rosado@alumnos.upm.es');
+[Z, P, K] = room('email1','email2');
 [B, A] = zp2tf(Z, P, K);
 [H, w] = freqz(B, A, 4096);
 mH = 20*log10(abs(H));
